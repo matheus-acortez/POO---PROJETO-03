@@ -10,3 +10,20 @@
     margin-bottom: 10px;
 }
 
+.photo{
+    margin-left: 80px;
+}
+
+.secondline{
+    margin-left: 300px;
+}
+
+.imagens{
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+img{
+    width: 225px !important;
+    height: 200px !important;
+}

@@ -17,7 +17,7 @@
                 <h4>Cadastro de Bandas</h4>
             </div>
             <div class="card-body">
-              <form>
+                <form class="">
                 <div class="form-group row">
                   <label for="nomeLabel" class="col-sm-2 col-form-label">Nome</label>
                   <div class="col-sm-3">
@@ -38,8 +38,26 @@
                 </div>
                 <input class="btn btn-primary" type="submit" value="Cadastrar">
             </form>
+            
+                <div class="row form-band">
+                    <div class="col-sm-12 col-md-12">
+                        <h4>Lista de bandas</h4>
+                        <table class="table table-striped table-dark">
+                        <thead>
+                          <tr>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Gênero</th>
+                            <th scope="col">País</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
         </div>
+    <%@include file="WEB-INF/jspf/footer.jspf" %>
     </body>
 </html>

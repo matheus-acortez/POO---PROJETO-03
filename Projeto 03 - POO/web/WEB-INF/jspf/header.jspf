@@ -7,3 +7,11 @@
         <h3>Cadastro de Músicas  | PROJETO 03 - Grupo 06 - Noturno</h3>
     </span>
 </nav>
+<div class="row menu">
+    <div class="col-md-12">
+        <a class="btn btn-primary" href="#" role="button">HOME</a>
+        <a class="btn btn-primary" href="#" role="button">BANDAS</a>
+        <a class="btn btn-primary" href="#" role="button">DISCOS</a>
+        <a class="btn btn-primary" href="#" role="button">MÚSICAS</a>
+     </div>
+ </div>

@@ -17,8 +17,27 @@
                 <h4>Cadastro de Bandas</h4>
             </div>
             <div class="card-body">
-              <h6 class="card-title">Bandas</h6>
-              
+              <form>
+                <div class="form-group row">
+                  <label for="nomeLabel" class="col-sm-2 col-form-label">Nome</label>
+                  <div class="col-sm-3">
+                    <input type="text" name="nome" class="form-control" id="nomeLabel" placeholder="Nome da banda">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="generoLabel" class="col-sm-2 col-form-label">Gênero</label>
+                  <div class="col-sm-3">
+                    <input type="text" name="genero" class="form-control" id="generoLabel" placeholder="Gênero Musical">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="paisLabel" class="col-sm-2 col-form-label">País</label>
+                  <div class="col-sm-3">
+                    <input type="text" name="pais" class="form-control" id="paisLabel" placeholder="País de origem">
+                  </div>
+                </div>
+                <input class="btn btn-primary" type="submit" value="Cadastrar">
+            </form>
             </div>
         </div>
         </div>

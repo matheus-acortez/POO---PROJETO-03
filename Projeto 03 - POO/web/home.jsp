@@ -3,7 +3,7 @@
     Created on : 10/09/2019, 12:31:12
     Author     : suporte03
 --%>
-
+<%@page import="br.com.fatecpg.cadastro.Bandas"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -25,8 +25,29 @@
                     </div>
                     <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                         <div class="card-body">
-                            
-                           <h4>Exibição dos dados</h4>
+                            <table class="table table-striped table-dark">
+                            <thead>
+                              <tr>
+                                <th scope="col">Índice</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Genêro</th>
+                                <th scope="col">País</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                        </tbody>
+ 
+                        <%for (int i=0; i<Bandas.getList().size(); i++){%>
+                        <%Bandas c= Bandas.getList().get(i);
+                        %>
+                        <tr>
+                            <td><%=i%></td>
+                            <td><%=c.getNome()%></td>
+                            <td><%=c.getGenero()%></td>
+                            <td><%=c.getPais()%></td>
+                        </tr>
+                        <%}%>
+                            </table>
                         </div>
                     </div>
                 </div>
@@ -37,6 +58,11 @@
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                         <div class="card-body">
                             <h4>Exibição dos dados</h4>
+                            
+                            
+                            <h1><%=Bandas.getList().size()%></h1>    
+                      
+                          
                         </div>
                     </div>
                 </div>            

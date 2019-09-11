@@ -16,10 +16,10 @@
         <div class="card">
             <div class="card-header">
                 <h4>Cadastro de Bandas</h4>
-                <% 
+            <% 
             try{
                 
-            if((request.getParameter("cadastrar")!=null)){
+            if((request.getParameter("cadastro")!=null)){
                 String nome= request.getParameter("nome");
                 String genero =request.getParameter("genero");
                 String pais =request.getParameter("pais");
@@ -71,7 +71,7 @@
                     <input type="text" name="pais" class="form-control" id="paisLabel" placeholder="País de origem">
                   </div>
                 </div>
-                <input class="btn btn-primary" type="submit" value="Cadastrar">
+                <input class="btn btn-primary" name="cadastro" type="submit" value="Cadastrar">
             </form>
             
                 <div class="row form-band">
@@ -94,11 +94,8 @@
                         <tr>
                             <td><%=i%></td>
                             <td><%=c.getNome()%></td>
-                            <td><%=c.getCnpj()%></td>
-                            <td><%=c.getRazao()%></td>
-                            <td><%=c.getEmail()%></td>
-                            <td><%=c.getTelefone()%></td>
-                            <td><%=c.getEndereco()%></td>
+                            <td><%=c.getGenero()%></td>
+                            <td><%=c.getPais()%></td>
                         <td>
                         <form>
                             <input type="hidden" name="index" value="<%=i%>"/>
@@ -144,8 +141,8 @@
                                         <form>
                                         <td><%=i%></td>
                                         <td><input type="text" name="nome" size="5" value="<%=c.getNome()%>"></td>
-                                        <td><input type="text" name="razao" size="6" value="<%=c.getGenero()%>"></td>
-                                        <td><input type="text" name="email" size="6" value="<%=c.getPais()%>"></td>
+                                        <td><input type="text" name="genero" size="6" value="<%=c.getGenero()%>"></td>
+                                        <td><input type="text" name="pais" size="6" value="<%=c.getPais()%>"></td>
                                         <input type="hidden" name="index" value="<%=i%>"/>
                                         <td><input type="submit" value="Salvar" name="salvar"</td>
                                         </form>

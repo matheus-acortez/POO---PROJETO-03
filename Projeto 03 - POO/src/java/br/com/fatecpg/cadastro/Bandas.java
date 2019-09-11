@@ -21,7 +21,7 @@ public class Bandas {
          return nome;
      }
      
-     public void setNome(){
+     public void setNome(String nome){
          this.nome = nome;
      }
      
@@ -29,7 +29,7 @@ public class Bandas {
          return nome;
      }
      
-     public void setGenero(){
+     public void setGenero(String genero){
          this.nome = nome;
      }
      
@@ -37,7 +37,7 @@ public class Bandas {
          return nome;
      }
      
-     public void setPais(){
+     public void setPais(String pais){
          this.nome = nome;
      }
     

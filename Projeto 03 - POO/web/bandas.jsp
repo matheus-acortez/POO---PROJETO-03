@@ -141,9 +141,9 @@
                                     <tr>
                                         <form>
                                         <td><%=i%></td>
-                                        <td><input type="text" name="nome" size="5" value="<%=c.getNome()%>"></td>
-                                        <td><input type="text" name="genero" size="6" value="<%=c.getGenero()%>"></td>
-                                        <td><input type="text" name="pais" size="6" value="<%=c.getPais()%>"></td>
+                                        <td><input type="text" name="nome"  value="<%=c.getNome()%>"></td>
+                                        <td><input type="text" name="genero" value="<%=c.getGenero()%>"></td>
+                                        <td><input type="text" name="pais" value="<%=c.getPais()%>"></td>
                                         <input type="hidden" name="index" value="<%=i%>"/>
                                         <td><input type="submit" value="Salvar" name="salvar"</td>
                                         </form>

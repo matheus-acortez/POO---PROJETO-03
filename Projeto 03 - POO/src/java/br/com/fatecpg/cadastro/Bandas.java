@@ -26,19 +26,19 @@ public class Bandas {
      }
      
      public String getGenero(){
-         return nome;
+         return genero;
      }
      
      public void setGenero(String genero){
-         this.nome = nome;
+         this.genero = genero;
      }
      
      public String getPais(){
-         return nome;
+         return pais;
      }
      
      public void setPais(String pais){
-         this.nome = nome;
+         this.pais = pais;
      }
     
 }

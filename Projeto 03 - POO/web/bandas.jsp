@@ -80,6 +80,7 @@
                         <table class="table table-striped table-dark">
                         <thead>
                           <tr>
+                            <th scope="col">Índice</th>
                             <th scope="col">Nome</th>
                             <th scope="col">Genêro</th>
                             <th scope="col">País</th>

@@ -1,4 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="br.com.fatecpg.cadastro.Bandas"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -15,6 +16,40 @@
         <div class="card">
             <div class="card-header">
                 <h4>Cadastro de Bandas</h4>
+                <% 
+            try{
+                
+            if((request.getParameter("cadastrar")!=null)){
+                String nome= request.getParameter("nome");
+                String genero =request.getParameter("genero");
+                String pais =request.getParameter("pais");
+                Bandas c = new Bandas();
+                c.setNome(nome);
+                c.setGenero(genero); 
+                c.setPais(pais); 
+                Bandas.getList().add(c);
+                response.sendRedirect(request.getRequestURI());
+            }
+            else if(request.getParameter("remove")!=null){
+                int i=Integer.parseInt(request.getParameter("index"));
+                Bandas.getList().remove(i);}
+            
+             else if (request.getParameter("salvar") != null) { 
+             int index = Integer.parseInt(request.getParameter("index"));
+                String nome= request.getParameter("nome");
+                String genero =request.getParameter("genero");
+                String pais =request.getParameter("pais");
+                Bandas c = new Bandas();
+                c.setNome(nome);
+                c.setGenero(genero); 
+                c.setPais(pais); 
+                Bandas.getList().set(index,c);
+               
+         }
+            
+            }catch(Exception ex){%>
+            <div>O form está preenchido incorretamente</div>
+        <%}%>
             </div>
             <div class="card-body">
                 <form class="">
@@ -46,18 +81,84 @@
                         <thead>
                           <tr>
                             <th scope="col">Nome</th>
-                            <th scope="col">Gênero</th>
+                            <th scope="col">Genêro</th>
                             <th scope="col">País</th>
                           </tr>
                         </thead>
                         <tbody>
                         </tbody>
-                        </table>
+                        <%if(request.getParameter("alterar") == null) {
+                        for (int i=0; i<Bandas.getList().size(); i++){%>
+                        <%Bandas c= Bandas.getList().get(i);
+                        %>
+                        <tr>
+                            <td><%=i%></td>
+                            <td><%=c.getNome()%></td>
+                            <td><%=c.getCnpj()%></td>
+                            <td><%=c.getRazao()%></td>
+                            <td><%=c.getEmail()%></td>
+                            <td><%=c.getTelefone()%></td>
+                            <td><%=c.getEndereco()%></td>
+                        <td>
+                        <form>
+                            <input type="hidden" name="index" value="<%=i%>"/>
+                            <input type="submit" name="remove" value="Excluir"/>
+                        </form>
+                        </td>
+                        <td>
+                            <form>
+                                <input type="hidden" name="index" value="<%=i%>"/>
+                                <input type="submit" name="alterar" value="Alterar"/>
+                            </form> 
+                        </td>
+                        </tr>
+
+                        <!-- Se 'alterar' for diferente de 'null' entra em um laço p/ a exibição dos cadastros que deseja alterar -->
+                        <%}}
+                        else {
+                            for (int i=0; i<Bandas.getList().size(); i++){
+                              Bandas c = Bandas.getList().get(i);
+                                if(i != Integer.parseInt(request.getParameter("index"))){%>
+                                    <tr>
+                                        <td><%=i%></td>
+                                        <td><%=c.getNome()%></td>
+                                        <td><%=c.getGenero()%></td>
+                                        <td><%=c.getPais()%></td>            
+                                    <td>
+                                        <form>
+                                            <input type="hidden" name="index" value="<%=i%>"/>
+                                            <input type="submit" name="remover" value="Excluir"/>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <form>
+                                            <input type="hidden" name="index" value="<%=i%>"/>
+                                            <input type="submit" name="alterar" value="Alterar"/>
+                                        </form>
+                                    </td>
+                                    </tr>
+                                    <%}else {%>
+
+                                    <!-- Form do 'alterar' -->
+                                    <tr>
+                                        <form>
+                                        <td><%=i%></td>
+                                        <td><input type="text" name="nome" size="5" value="<%=c.getNome()%>"></td>
+                                        <td><input type="text" name="razao" size="6" value="<%=c.getGenero()%>"></td>
+                                        <td><input type="text" name="email" size="6" value="<%=c.getPais()%>"></td>
+                                        <input type="hidden" name="index" value="<%=i%>"/>
+                                        <td><input type="submit" value="Salvar" name="salvar"</td>
+                                        </form>
+                                    </tr>
+
+                                <%}}}%>
+                        </tbody>
+              
+                        
                     </div>
                 </div>
             </div>
         </div>
         </div>
-    <%@include file="WEB-INF/jspf/footer.jspf" %>
     </body>
 </html>

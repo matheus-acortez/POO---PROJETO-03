@@ -1,14 +1,44 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package br.com.fatecpg.cadastro;
 
-/**
- *
- * @author suporte03
- */
+import java.util.ArrayList;
+
 public class Bandas {
+    
+    public String nome;
+    public String genero;
+    public String pais;
+    public static ArrayList<Bandas> list;
+    
+     public static ArrayList<Bandas> getList(){
+        if(list==null){
+        list = new ArrayList<>();
+        }
+    return list;
+    }
+     
+     public String getNome(){
+         return nome;
+     }
+     
+     public void setNome(){
+         this.nome = nome;
+     }
+     
+     public String getGenero(){
+         return nome;
+     }
+     
+     public void setGenero(){
+         this.nome = nome;
+     }
+     
+     public String getPais(){
+         return nome;
+     }
+     
+     public void setPais(){
+         this.nome = nome;
+     }
     
 }

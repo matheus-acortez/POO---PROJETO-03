@@ -2,6 +2,7 @@
 package br.com.fatecpg.cadastro;
 
 import java.util.ArrayList;
+import java.net.URL;
 
 public class Bandas {
     

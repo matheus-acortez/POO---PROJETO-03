@@ -1,3 +1,4 @@
+<%@page import="java.net.URL"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="br.com.fatecpg.cadastro.Bandas"%>
 <!DOCTYPE html>
@@ -28,13 +29,14 @@
                     c.setPais(pais); 
                     Bandas.getList().add(c);
                     response.sendRedirect(request.getRequestURI());
+            
                 }
                 else if(request.getParameter("remove")!=null){
                     int i=Integer.parseInt(request.getParameter("index"));
                     Bandas.getList().remove(i);}
 
                  else if (request.getParameter("salvar") != null) { 
-                 int index = Integer.parseInt(request.getParameter("index"));
+                    int index = Integer.parseInt(request.getParameter("index"));
                     String nome= request.getParameter("nome");
                     String genero =request.getParameter("genero");
                     String pais =request.getParameter("pais");
@@ -43,7 +45,6 @@
                     c.setGenero(genero); 
                     c.setPais(pais); 
                     Bandas.getList().set(index,c);
-
              }
 
                 }catch(Exception ex){%>
@@ -116,6 +117,7 @@
                             for (int i=0; i<Bandas.getList().size(); i++){
                               Bandas c = Bandas.getList().get(i);
                                 if(i != Integer.parseInt(request.getParameter("index"))){%>
+                                    <!-- Aqui é somente a exibição dos valores, retornando o valor atual do atributo. -->
                                     <tr>
                                         <td><%=i%></td>
                                         <td><%=c.getNome()%></td>

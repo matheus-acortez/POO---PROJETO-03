@@ -5,10 +5,10 @@ import java.util.ArrayList;
 
 public class Bandas {
     
-    public String nome;
-    public String genero;
-    public String pais;
-    public static ArrayList<Bandas> list;
+    private String nome;
+    private String genero;
+    private String pais;
+    private static ArrayList<Bandas> list;
     
      public static ArrayList<Bandas> getList(){
         if(list==null){

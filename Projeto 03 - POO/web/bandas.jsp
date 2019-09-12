@@ -11,45 +11,45 @@
         <title>Cadastro de Bandas</title>
     </head>
     <body>
-        <div class="container">
+        <div class="container">                                                                                         
         <%@include file="WEB-INF/jspf/header.jspf"%>
         <div class="card">
             <div class="card-header">
                 <h4>Cadastro de Bandas</h4>
-            <% 
-            try{
-                
-            if((request.getParameter("cadastro")!=null)){
-                String nome= request.getParameter("nome");
-                String genero =request.getParameter("genero");
-                String pais =request.getParameter("pais");
-                Bandas c = new Bandas();
-                c.setNome(nome);
-                c.setGenero(genero); 
-                c.setPais(pais); 
-                Bandas.getList().add(c);
-                response.sendRedirect(request.getRequestURI());
-            }
-            else if(request.getParameter("remove")!=null){
-                int i=Integer.parseInt(request.getParameter("index"));
-                Bandas.getList().remove(i);}
-            
-             else if (request.getParameter("salvar") != null) { 
-             int index = Integer.parseInt(request.getParameter("index"));
-                String nome= request.getParameter("nome");
-                String genero =request.getParameter("genero");
-                String pais =request.getParameter("pais");
-                Bandas c = new Bandas();
-                c.setNome(nome);
-                c.setGenero(genero); 
-                c.setPais(pais); 
-                Bandas.getList().set(index,c);
-               
-         }
-            
-            }catch(Exception ex){%>
-            <div>O form está preenchido incorretamente</div>
-        <%}%>
+                <% 
+                try{
+
+                if((request.getParameter("cadastro")!=null)){
+                    String nome= request.getParameter("nome");
+                    String genero =request.getParameter("genero");
+                    String pais =request.getParameter("pais");
+                    Bandas c = new Bandas();
+                    c.setNome(nome);
+                    c.setGenero(genero); 
+                    c.setPais(pais); 
+                    Bandas.getList().add(c);
+                    response.sendRedirect(request.getRequestURI());
+                }
+                else if(request.getParameter("remove")!=null){
+                    int i=Integer.parseInt(request.getParameter("index"));
+                    Bandas.getList().remove(i);}
+
+                 else if (request.getParameter("salvar") != null) { 
+                 int index = Integer.parseInt(request.getParameter("index"));
+                    String nome= request.getParameter("nome");
+                    String genero =request.getParameter("genero");
+                    String pais =request.getParameter("pais");
+                    Bandas c = new Bandas();
+                    c.setNome(nome);
+                    c.setGenero(genero); 
+                    c.setPais(pais); 
+                    Bandas.getList().set(index,c);
+
+             }
+
+                }catch(Exception ex){%>
+                <div>O form está preenchido incorretamente</div>
+            <%}%>
             </div>
             <div class="card-body">
                 <form class="">

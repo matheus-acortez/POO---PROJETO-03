@@ -1,8 +1,4 @@
-<%-- 
-    Document   : home
-    Created on : 10/09/2019, 12:31:12
-    Author     : suporte03
---%>
+
 <%@page import="br.com.fatecpg.cadastro.Bandas"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -58,11 +54,7 @@
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                         <div class="card-body">
                             <h4>Exibição dos dados</h4>
-                            
-                            
-                            <h1><%=Bandas.getList().size()%></h1>    
-                      
-                          
+                         
                         </div>
                     </div>
                 </div>            

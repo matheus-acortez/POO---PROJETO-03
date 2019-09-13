@@ -93,7 +93,7 @@
                         <%Bandas c= Bandas.getList().get(i);
                         %>
                         <tr>
-                            <td><%=i%></td>
+                            <td><%=i+1%></td>
                             <td><%=c.getNome()%></td>
                             <td><%=c.getGenero()%></td>
                             <td><%=c.getPais()%></td>
@@ -119,7 +119,7 @@
                                 if(i != Integer.parseInt(request.getParameter("index"))){%>
                                     <!-- Aqui é somente a exibição dos valores, retornando o valor atual do atributo. -->
                                     <tr>
-                                        <td><%=i%></td>
+                                        <td><%=i+1%></td>
                                         <td><%=c.getNome()%></td>
                                         <td><%=c.getGenero()%></td>
                                         <td><%=c.getPais()%></td>            

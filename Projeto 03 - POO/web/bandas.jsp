@@ -48,7 +48,7 @@
              }
 
                 }catch(Exception ex){%>
-                <div>O form está preenchido incorretamente</div>
+                <div>O formulário não foi preenchido corretamente. Tente novamente</div>
             <%}%>
             </div>
             <div class="card-body">

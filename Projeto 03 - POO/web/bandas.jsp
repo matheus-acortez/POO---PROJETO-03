@@ -141,7 +141,7 @@
                                     <!-- Form do 'alterar' -->
                                     <tr>
                                         <form>
-                                        <td><%=i%></td>
+                                        <td><%=i+1%></td>
                                         <td><input type="text" name="nome"  value="<%=c.getNome()%>"></td>
                                         <td><input type="text" name="genero" value="<%=c.getGenero()%>"></td>
                                         <td><input type="text" name="pais" value="<%=c.getPais()%>"></td>

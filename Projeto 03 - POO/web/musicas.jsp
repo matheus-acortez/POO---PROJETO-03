@@ -24,11 +24,13 @@
                     String genero =request.getParameter("genero");
                     String album =request.getParameter("album");
                     String banda =request.getParameter("banda");
+                    String ano  =request.getParameter("ano");
                     Musicas c = new Musicas();
                     c.setNome(nome);
                     c.setGenero(genero);
                     c.setAlbum(album);
                     c.setBanda(banda); 
+                    c.setAno(ano);
                     Musicas.getList().add(c);
                     response.sendRedirect(request.getRequestURI());
             
@@ -43,11 +45,13 @@
                     String genero =request.getParameter("genero");
                     String album =request.getParameter("album");
                     String banda =request.getParameter("banda");
+                    String ano =request.getParameter("ano");
                     Musicas c = new Musicas();
                     c.setNome(nome);
                     c.setGenero(genero); 
                     c.setAlbum(album);
                     c.setBanda(banda);
+                    c.setAno(ano);
                     Musicas.getList().set(index,c);
              }
 
@@ -81,6 +85,12 @@
                     <input type="text" name="banda" class="form-control" id="paisLabel" placeholder="Nome da banda ou artista">
                   </div>
                 </div>
+                  <div class="form-group row">
+                  <label for="anoLabel" class="col-sm-2 col-form-label">Ano de Lançamento</label>
+                  <div class="col-sm-3">
+                    <input type="text" name="ano" class="form-control" id="paisLabel" placeholder="Data de Lançamento">
+                  </div>
+                </div>
                 <input class="btn btn-primary" name="cadastro" type="submit" value="Cadastrar">
             </form>
             
@@ -95,6 +105,7 @@
                             <th scope="col">Genêro</th>
                             <th scope="col">Álbum</th>
                             <th scope="col">Banda ou Artista</th>
+                            <th scope="col">Ano de Lançamento</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -108,6 +119,7 @@
                             <td><%=c.getGenero()%></td>
                             <td><%=c.getAlbum()%></td>
                             <td><%=c.getBanda()%></td>
+                            <td><%=c.getAno()%></td>
                         <td>
                         <form>
                             <input type="hidden" name="index" value="<%=i%>"/>
@@ -134,7 +146,8 @@
                                         <td><%=c.getNome()%></td>
                                         <td><%=c.getGenero()%></td>
                                         <td><%=c.getAlbum()%></td>
-                                        <td><%=c.getBanda()%></td>            
+                                        <td><%=c.getBanda()%></td>  
+                                        <td><%=c.getAno()%></td>
                                     <td>
                                         <form>
                                             <input type="hidden" name="index" value="<%=i%>"/>
@@ -158,6 +171,7 @@
                                         <td><input type="text" name="genero" value="<%=c.getGenero()%>"></td>
                                         <td><input type="text" name="album" value="<%=c.getAlbum()%>"></td>
                                         <td><input type="text" name="banda" value="<%=c.getBanda()%>"></td>
+                                        <td><input type="text" name="banda" value="<%=c.getAno()%>"></td>
                                         <input type="hidden" name="index" value="<%=i%>"/>
                                         <td><input type="submit" value="Salvar" name="salvar"</td>
                                         </form>

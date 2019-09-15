@@ -10,6 +10,15 @@ public class Musicas {
     private String genero;
     private String banda;
     private String album;
+    private String ano;
+
+    public void setAno(String ano) {
+        this.ano = ano;
+    }
+
+    public String getAno() {
+        return ano;
+    }
     private static ArrayList<Musicas> list;
     
     public static ArrayList<Musicas> getList() {

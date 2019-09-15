@@ -17,7 +17,7 @@
             <div class="card-header">
                 <h4>Cadastro de Discos</h4>
                 <% 
-                try{
+            try{
 
                 if((request.getParameter("cadastro")!=null)){
                     String nome= request.getParameter("nome");
@@ -52,6 +52,7 @@
         
             }catch(Exception ex){%>
         <div>O formulário não foi preenchido corretamente. Tente novamente</div>
+        
     <%}%>
     </div>
     <div class="card-body">
@@ -67,10 +68,10 @@
           <div class="col-sm-3">
             <input type="text" name="genero" class="form-control" id="generoLabel" placeholder="Gênero Musical">
           </div>
-        </div>
-        <div class="form-group row">
-          <label for="artistaLabel" class="col-sm-2 col-form-label">Artista</label>
-          <div class="col-sm-3">
+           </div>
+           <div class="form-group row">
+           <label for="artistaLabel" class="col-sm-2 col-form-label">Artista</label>
+            <div class="col-sm-3">
             <input type="text" name="artista" class="form-control" id="artistaLabel" placeholder="Nome do Artista">
           </div>
         </div>
@@ -81,9 +82,8 @@
             </div>
           </div>
         <input class="btn btn-primary" name="cadastro" type="submit" value="Cadastrar">
-    </form>        
-    
-        <div class="row form-band">
+    </form>      
+            <div class="row form-band">
             <div class="col-sm-12 col-md-12">
                 <h4>Lista de Discos</h4>
                 <table class="table table-striped table-dark">

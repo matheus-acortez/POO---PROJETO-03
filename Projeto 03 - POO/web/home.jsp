@@ -1,4 +1,5 @@
 
+<%@page import="br.com.fatecpg.cadastro.Musicas"%>
 <%@page import="br.com.fatecpg.cadastro.Bandas"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -53,7 +54,29 @@
                     </div>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                         <div class="card-body">
-                            <h4>Exibição dos dados</h4>
+                            <table class="table table-striped table-dark">
+                            <thead>
+                              <tr>
+                                <th scope="col">Índice</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Genêro</th>
+                                <th scope="col">Banda ou Artista</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                        </tbody>
+ 
+                        <%for (int i=0; i<Musicas.getList().size(); i++){%>
+                        <%Musicas c= Musicas.getList().get(i);
+                        %>
+                        <tr>
+                            <td><%=i+1%></td>
+                            <td><%=c.getNome()%></td>
+                            <td><%=c.getGenero()%></td>
+                            <td><%=c.getBanda()%></td>
+                        </tr>
+                        <%}%>
+                            </table>
                          
                         </div>
                     </div>

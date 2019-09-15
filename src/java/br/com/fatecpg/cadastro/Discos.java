@@ -38,7 +38,7 @@ public class Discos {
          return artista;
      }
      
-     public void setArtista(String pais){
+     public void setArtista(String artista){
          this.artista = artista;
      }
      

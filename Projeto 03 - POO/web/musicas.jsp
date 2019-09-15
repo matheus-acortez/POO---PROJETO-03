@@ -86,7 +86,7 @@
                   </div>
                 </div>
                   <div class="form-group row">
-                  <label for="anoLabel" class="col-sm-2 col-form-label">Ano de Lançamento</label>
+                  <label for="anoLabel" class="col-sm-2 col-form-label">Ano</label>
                   <div class="col-sm-3">
                     <input type="text" name="ano" class="form-control" id="paisLabel" placeholder="Data de Lançamento">
                   </div>

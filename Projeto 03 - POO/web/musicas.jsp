@@ -171,7 +171,7 @@
                                         <td><input type="text" name="genero" value="<%=c.getGenero()%>"></td>
                                         <td><input type="text" name="album" value="<%=c.getAlbum()%>"></td>
                                         <td><input type="text" name="banda" value="<%=c.getBanda()%>"></td>
-                                        <td><input type="text" name="banda" value="<%=c.getAno()%>"></td>
+                                        <td><input type="text" name="ano" value="<%=c.getAno()%>"></td>
                                         <input type="hidden" name="index" value="<%=i%>"/>
                                         <td><input type="submit" value="Salvar" name="salvar"</td>
                                         </form>

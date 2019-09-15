@@ -1,7 +1,5 @@
 <%-- any content can be specified here e.g.: --%>
 <%@ page pageEncoding="UTF-8" %>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="estilo.css">
 <nav class="navbar navbar-dark bg-dark navprincipal">
      <span class="navbar-text mx-auto">
         <h3>Cadastro de Músicas  | PROJETO 03 - Grupo 06 - Noturno</h3>

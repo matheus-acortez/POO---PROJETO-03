@@ -13,7 +13,7 @@
     <body>
        <div class="container">                                                                                         
         <%@include file="WEB-INF/jspf/header.jspf"%>
-        <div class="card">
+            <div class="card">
             <div class="card-header">
                 <h4>Cadastro de Discos</h4>
                 <% 
@@ -30,8 +30,7 @@
                     c.setArtista(artista); 
                     c.setAno(ano);
                     Discos.getList().add(c);
-                    response.sendRedirect(request.getRequestURI());
-            
+                    response.sendRedirect(request.getRequestURI());            
                 }
                 else if(request.getParameter("remove")!=null){
                     int i=Integer.parseInt(request.getParameter("index"));
@@ -82,7 +81,7 @@
             </div>
           </div>
         <input class="btn btn-primary" name="cadastro" type="submit" value="Cadastrar">
-    </form>
+    </form>        
     
         <div class="row form-band">
             <div class="col-sm-12 col-md-12">

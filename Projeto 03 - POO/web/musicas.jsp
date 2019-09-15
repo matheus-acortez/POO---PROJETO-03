@@ -143,7 +143,7 @@
                                         <td><%=i+1%></td>
                                         <td><input type="text" name="nome"  value="<%=c.getNome()%>"></td>
                                         <td><input type="text" name="genero" value="<%=c.getGenero()%>"></td>
-                                        <td><input type="text" name="pais" value="<%=c.getBanda()%>"></td>
+                                        <td><input type="text" name="banda" value="<%=c.getBanda()%>"></td>
                                         <input type="hidden" name="index" value="<%=i%>"/>
                                         <td><input type="submit" value="Salvar" name="salvar"</td>
                                         </form>

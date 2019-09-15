@@ -61,6 +61,7 @@
                                 <th scope="col">Genêro</th>
                                 <th scope="col">Álbum</th>
                                 <th scope="col">Banda ou Artista</th>
+                                <th scope="col">Ano</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -74,6 +75,7 @@
                             <td><%=c.getNome()%></td>
                             <td><%=c.getGenero()%></td>
                             <td><%=c.getAlbum()%></td>
+                            <td><%=c.getBanda()%></td>
                             <td><%=c.getBanda()%></td>
                         </tr>
                         <%}%>

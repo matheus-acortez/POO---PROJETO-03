@@ -9,6 +9,7 @@ public class Musicas {
     private String nome;
     private String genero;
     private String banda;
+    private String album;
     private static ArrayList<Musicas> list;
     
     public static ArrayList<Musicas> getList() {
@@ -40,6 +41,14 @@ public class Musicas {
 
     public void setBanda(String banda) {
         this.banda = banda;
+    }
+    
+     public String getAlbum() {
+        return album;
+    }
+
+    public void setAlbum(String album) {
+        this.album = album;
     }
     
    

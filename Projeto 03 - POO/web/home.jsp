@@ -1,4 +1,3 @@
-
 <%@page import="br.com.fatecpg.cadastro.Musicas"%>
 <%@page import="br.com.fatecpg.cadastro.Bandas"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -60,6 +59,7 @@
                                 <th scope="col">Índice</th>
                                 <th scope="col">Nome</th>
                                 <th scope="col">Genêro</th>
+                                <th scope="col">Álbum</th>
                                 <th scope="col">Banda ou Artista</th>
                               </tr>
                             </thead>
@@ -73,6 +73,7 @@
                             <td><%=i+1%></td>
                             <td><%=c.getNome()%></td>
                             <td><%=c.getGenero()%></td>
+                            <td><%=c.getAlbum()%></td>
                             <td><%=c.getBanda()%></td>
                         </tr>
                         <%}%>

@@ -20,18 +20,10 @@
                 try{
 
                 if((request.getParameter("cadastro")!=null)){
-                    String nome= request.getParameter("nome");
-                    String genero =request.getParameter("genero");
-                    String album =request.getParameter("album");
-                    String banda =request.getParameter("banda");
-                    String ano  =request.getParameter("ano");
-                    Musicas c = new Musicas();
-                    c.setNome(nome);
-                    c.setGenero(genero);
-                    c.setAlbum(album);
-                    c.setBanda(banda); 
-                    c.setAno(ano);
-                    Musicas.getList().add(c);
+                    String nome = request.getParameter("nome");
+                    String genero = Integer.parseInt(request.getParameter("genero"));
+                    String ano = Integer.parseInt(request.getParameter("ano"));
+                    Db.getDisco().add(new Disco(nome, autor, ano));
                     response.sendRedirect(request.getRequestURI());
             
                 }
